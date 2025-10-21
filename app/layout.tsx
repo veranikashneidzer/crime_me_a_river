@@ -17,11 +17,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <a href={APPLICATION_ROUTES.BOOKS}>Books</a>
-        <a href={APPLICATION_ROUTES.GAMES}>Games</a>
-        <a href={APPLICATION_ROUTES.MOVIES}>Movies</a>
-        <a href={APPLICATION_ROUTES.NEWS}>News</a>
+      <header>
+        <nav className="flex flex-col gap-[32px] items-center justify-center min-h-screen">
+          <a href={APPLICATION_ROUTES.BOOKS}>Books</a>
+          <a href={APPLICATION_ROUTES.GAMES}>Games</a>
+          <a href={APPLICATION_ROUTES.MOVIES}>Movies</a>
+          <a href={APPLICATION_ROUTES.NEWS}>News</a>
+        </nav>
+      </header>
+      <main className="flex flex-col gap-[32px] items-center justify-center min-h-screen">
         {children}
+      </main>
+      <footer className="flex flex-col gap-[32px] items-center justify-center min-h-screen">
+        Created by <a href="www.linkedin.com/in/veranikashneidzer">Veranika Shneidzer</a>/
+      </footer>
       </body>
     </html>
   );

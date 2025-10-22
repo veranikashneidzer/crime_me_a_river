@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-
+import Link from 'next/link'
 import { APPLICATION_ROUTES } from "@/app/constants";
 
 import "./globals.css";
@@ -19,10 +19,10 @@ export default function RootLayout({
       <body>
       <header>
         <nav className="flex flex-col gap-[32px] items-center justify-center min-h-screen">
-          <a href={APPLICATION_ROUTES.BOOKS}>Books</a>
-          <a href={APPLICATION_ROUTES.GAMES}>Games</a>
-          <a href={APPLICATION_ROUTES.MOVIES}>Movies</a>
-          <a href={APPLICATION_ROUTES.NEWS}>News</a>
+          <Link href={APPLICATION_ROUTES.BOOKS}>Books</Link>
+          <Link href={APPLICATION_ROUTES.GAMES}>Games</Link>
+          <Link href={APPLICATION_ROUTES.MOVIES}>Movies</Link>
+          <Link href={APPLICATION_ROUTES.NEWS}>News</Link>
         </nav>
       </header>
       <main className="flex flex-col gap-[32px] items-center justify-center min-h-screen">
